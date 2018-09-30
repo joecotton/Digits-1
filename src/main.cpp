@@ -32,9 +32,9 @@ SevenSegmentTM1637 display(PIN_CLK, PIN_DIO);
 // run setup code
 void setup()
 {
-  Serial.begin(9600);        // initializes the Serial connection @ 9600 baud
+  Serial.begin(57600);        // initializes the Serial connection @ 9600 baud
   display.begin();           // initializes the display
-  display.setBacklight(10); // set the brightness to 100 %
+  display.setBacklight(100); // set the brightness to 100 %
   display.print("INIT");     // display INIT on the display
   delay(1000);               // wait 1000 ms
 };
@@ -42,7 +42,6 @@ void setup()
 // run loop (forever)
 void loop()
 {
-  display.setBacklight(10);              // set the brightness to 100 %
   display.print("LOOP");                 // display LOOP on the display
   delay(1000);                           // wait 1000 ms
   display.print("COUNTING SOME DIGITS"); // print COUNTING SOME DIGITS
